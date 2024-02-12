@@ -39,6 +39,134 @@ const rpcUrl = z.string().url();
 
 const CHAINS: Chain[] = [
   {
+    id: 313371,
+    name: "dev1",
+    rpc: rpcUrl
+      .default("http://127.0.0.1:8545")
+      .parse(process.env.DEV1_RPC_URL),
+    pricesFromTimestamp: Date.UTC(2024, 1, 1, 0, 0, 0),
+    tokens: [
+      {
+        code: "USDC",
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        decimals: 6,
+        priceSource: {
+          chainId: 1,
+          address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        },
+      },
+      {
+        code: "DAI",
+        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        decimals: 18,
+        priceSource: {
+          chainId: 1,
+          address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        },
+      },
+      {
+        code: "ETH",
+        address: "0x0000000000000000000000000000000000000000",
+        decimals: 18,
+        priceSource: {
+          chainId: 1,
+          address: "0x0000000000000000000000000000000000000000",
+        },
+      },
+    ],
+    subscriptions: [
+      {
+        contractName: "AlloV1/ProjectRegistry/V2",
+        address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      },
+      {
+        contractName: "AlloV1/RoundFactory/V2",
+        address: "0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f",
+      },
+      {
+        contractName: "AlloV1/QuadraticFundingVotingStrategyFactory/V2",
+        address: "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
+      },
+      {
+        contractName: "AlloV1/ProgramFactory/V1",
+        address: "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      },
+      // Allo V2
+      {
+        contractName: "AlloV2/Registry/V1",
+        address: "0x948B3c65b89DF0B4894ABE91E6D02FE579834F8F",
+      },
+      {
+        contractName: "AlloV2/Allo/V1",
+        address: "0x59F2f1fCfE2474fD5F0b9BA1E73ca90b143Eb8d0",
+      },
+    ],
+  },
+  {
+    id: 313372,
+    name: "dev2",
+    rpc: rpcUrl
+      .default("http://127.0.0.1:8546")
+      .parse(process.env.DEV2_RPC_URL),
+    pricesFromTimestamp: Date.UTC(2024, 1, 1, 0, 0, 0),
+    tokens: [
+      {
+        code: "USDC",
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        decimals: 6,
+        priceSource: {
+          chainId: 1,
+          address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        },
+      },
+      {
+        code: "DAI",
+        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        decimals: 18,
+        priceSource: {
+          chainId: 1,
+          address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        },
+      },
+      {
+        code: "ETH",
+        address: "0x0000000000000000000000000000000000000000",
+        decimals: 18,
+        priceSource: {
+          chainId: 1,
+          address: "0x0000000000000000000000000000000000000000",
+        },
+      },
+    ],
+    subscriptions: [
+      {
+        contractName: "AlloV1/ProjectRegistry/V2",
+        address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      },
+      {
+        contractName: "AlloV1/RoundFactory/V2",
+        address: "0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f",
+      },
+      {
+        contractName: "AlloV1/QuadraticFundingVotingStrategyFactory/V2",
+        address: "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
+      },
+      {
+        contractName: "AlloV1/ProgramFactory/V1",
+        address: "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      },
+      // Allo V2
+      {
+        contractName: "AlloV2/Registry/V1",
+        address: "0x948B3c65b89DF0B4894ABE91E6D02FE579834F8F",
+      },
+      {
+        contractName: "AlloV2/Allo/V1",
+        address: "0x59F2f1fCfE2474fD5F0b9BA1E73ca90b143Eb8d0",
+      },
+    ],
+  },
+  {
     id: 5,
     name: "goerli",
     rpc: rpcUrl
