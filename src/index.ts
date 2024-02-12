@@ -515,6 +515,11 @@ async function catchupAndWatchChain(
       });
     }
 
+    // FIXME: if the RPC are too quick, indexToBlock will try to create
+    // the subscription table twice
+    await new Promise((resolve) => {
+      setTimeout(resolve, Math.random() * 1000);
+    });
     await indexer.indexToBlock(config.toBlock);
 
     indexerLogger.info({
